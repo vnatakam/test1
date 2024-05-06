@@ -1,0 +1,24 @@
+﻿@page
+@model VennelaWeb.Pages.Categories.IndexModel
+@{
+    <div>
+    <a asp-page="Create" class="btn btn-primary">create new category</a>
+    </div>
+    <h2> category list</h2>
+    <table>
+    <tr>
+    <th>name</th>
+    <th>order</th>
+    </tr>
+    @foreach(var obj in Model.Categories){
+        <tr>
+        <td>@obj.Name</td>
+        <td>@obj.DisplayOrder</td>
+        <td>
+        <a asp-page="Edit" asp-route-id="@obj.Id">edit</a>
+        <a asp-page="Delete" asp-route-id="@obj.Id">delete</a>
+        </td>
+        </tr>
+    }
+    </table>
+}

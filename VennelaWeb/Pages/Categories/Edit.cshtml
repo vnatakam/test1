@@ -1,0 +1,8 @@
+﻿@page
+@model VennelaWeb.Pages.Categories.EditModel
+<form method="post">
+    <input asp-for="Category.Id" />
+   <input asp-for="Category.Name"/>
+   <input asp-for="Category.DisplayOrder"/>
+   <button type="submit">update</button>
+</form>

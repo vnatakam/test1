@@ -1,0 +1,8 @@
+﻿@page
+@model VennelaWeb.Pages.Categories.DeleteModel
+<form method="post">
+    <input  hidden asp-for="Category.Id" />
+   <input asp-for="Category.Name" disabled/>
+   <input asp-for="Category.DisplayOrder" disabled/>
+   <button type="submit">Delete</button>
+</form>
